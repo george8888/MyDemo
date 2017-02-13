@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+-->
+<hibernate-mapping>
+<class name="com.lock.Student" table="STUDENTVERSION" >
+    <id name="id" unsaved-value="null">
+      <generator class="uuid.hex"></generator>
+    </id>
+    <!--version标签必须跟在id标签后面-->
+    <version name="version" column="ver" type="int"></version>
+    <property name="name" type="string" column="name"></property>  
+</class>
+
+</hibernate-mapping>
